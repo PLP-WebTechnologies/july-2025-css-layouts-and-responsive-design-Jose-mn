@@ -1,0 +1,63 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+/* Navbar using Flexbox */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* logo on left, links on right */
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Main Content using Grid */
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns on larger screens */
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr; /* stack sections on smaller screens */
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
